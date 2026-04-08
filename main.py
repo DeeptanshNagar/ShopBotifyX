@@ -7,7 +7,7 @@ Run with:
 Type 'exit' or 'quit' to end the session.
 """
 
-from agent import SupportAgent
+from Agents.agent import SupportAgent
 
 
 BANNER = """
