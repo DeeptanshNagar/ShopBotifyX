@@ -1,0 +1,50 @@
+[
+  {
+    "id": "faq-001",
+    "tags": ["return", "refund", "policy"],
+    "question": "What is your return policy?",
+    "answer": "We accept returns within 30 days of delivery. Items must be unused and in original packaging. Refunds are processed within 5–7 business days after we receive the item."
+  },
+  {
+    "id": "faq-002",
+    "tags": ["shipping", "delivery", "time"],
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping takes 3–7 business days. Expedited shipping (2-day) is available at checkout for an additional fee. Orders placed before 2 PM EST ship the same day."
+  },
+  {
+    "id": "faq-003",
+    "tags": ["cancel", "cancellation", "order"],
+    "question": "Can I cancel my order?",
+    "answer": "Orders can be cancelled within 1 hour of placement if they haven't entered processing. After that, you'll need to wait for delivery and initiate a return."
+  },
+  {
+    "id": "faq-004",
+    "tags": ["payment", "methods", "pay", "credit card", "paypal"],
+    "question": "What payment methods do you accept?",
+    "answer": "We accept Visa, Mastercard, American Express, PayPal, and Apple Pay. All transactions are secured with 256-bit SSL encryption."
+  },
+  {
+    "id": "faq-005",
+    "tags": ["track", "tracking", "shipment", "where is my order"],
+    "question": "How do I track my order?",
+    "answer": "Once your order ships, you'll receive a tracking number via email. You can also look up your order status using your order ID on our website or by asking this support agent."
+  },
+  {
+    "id": "faq-006",
+    "tags": ["damaged", "broken", "wrong item", "missing"],
+    "question": "What if I received a damaged or wrong item?",
+    "answer": "We sincerely apologize! Please contact support within 48 hours of delivery with a photo of the item. We'll send a replacement or issue a full refund at no cost to you."
+  },
+  {
+    "id": "faq-007",
+    "tags": ["account", "password", "login", "reset"],
+    "question": "How do I reset my password?",
+    "answer": "Click 'Forgot Password' on the login page and enter your email. You'll receive a reset link within 2 minutes. Check your spam folder if you don't see it."
+  },
+  {
+    "id": "faq-008",
+    "tags": ["discount", "coupon", "promo", "code"],
+    "question": "How do I apply a discount or promo code?",
+    "answer": "Enter your promo code in the 'Coupon Code' field at checkout and click 'Apply'. Only one code can be used per order. Codes cannot be applied after an order is placed."
+  }
+]
