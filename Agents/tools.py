@@ -12,8 +12,9 @@ from pathlib import Path
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 
-DATA_DIR = Path(__file__).parent
-LOG_DIR = Path(__file__).parent / "logs"
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "Data"
+LOG_DIR = PROJECT_ROOT / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Logger for escalations ───────────────────────────────────────────────────

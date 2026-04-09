@@ -1,6 +1,6 @@
 # ShopBot — AI Customer Support Agent
 
-A production-minded multi-tool AI agent for **TechNest**, a fictional electronics e-commerce store. Built with Python and powered by [Groq](https://console.groq.com) (`llama-3.3-70b-versatile`) using native tool calling — no heavy frameworks.
+A production-minded multi-tool AI agent for **TechNest**, a fictional electronics e-commerce store. Built with Python and powered by [Groq](https://console.groq.com) (`meta-llama/llama-4-scout-17b-16e-instruct`) using native tool calling — no heavy frameworks.
 
 ---
 
@@ -20,16 +20,18 @@ A production-minded multi-tool AI agent for **TechNest**, a fictional electronic
 ## Project Structure
 
 ```
-ai-support-agent/
-├── agent/
-│   ├── __init__.py
+ShopBotifyX/
+├── Agents/
+│   ├── __init__.py       # package init
 │   ├── agent.py          # core LLM loop + tool orchestration
 │   └── tools.py          # tool implementations + schemas + dispatcher
-├── data/
+├── Data/
 │   ├── orders.json       # mock order database
 │   └── faq.json          # knowledge base (8 entries)
 ├── logs/
 │   └── escalations.log   # auto-created; human escalation log
+├── .env                  # your GROQ_API_KEY (gitignored)
+├── .gitignore
 ├── main.py               # CLI entrypoint
 ├── PROMPT_OPTIMIZATION.md
 ├── requirements.txt
@@ -46,7 +48,7 @@ ai-support-agent/
 
 ```bash
 git clone <your-repo-url>
-cd ai-support-agent
+cd ShopBotifyX
 ```
 
 ### 2. Install dependencies
@@ -59,15 +61,10 @@ pip install -r requirements.txt
 
 Get a free key at [https://console.groq.com](https://console.groq.com).
 
-```bash
-# macOS / Linux
-export GROQ_API_KEY=your_key_here
+Create a `.env` file in the project root:
 
-# Windows (Command Prompt)
-set GROQ_API_KEY=your_key_here
-
-# Windows (PowerShell)
-$env:GROQ_API_KEY="your_key_here"
+```
+GROQ_API_KEY=your_key_here
 ```
 
 ### 4. Run
