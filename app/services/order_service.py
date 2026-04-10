@@ -11,7 +11,6 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 
 from app.core.config import DATA_DIR
 from app.models.schemas import OrderInfo, ReturnResult, ToolError

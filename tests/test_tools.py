@@ -8,7 +8,6 @@ Covers:
 """
 
 import json
-import pytest
 
 from app.services.order_service import OrderService
 from app.services.faq_service import FAQService

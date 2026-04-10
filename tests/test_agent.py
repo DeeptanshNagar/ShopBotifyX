@@ -8,7 +8,6 @@ an API key or network access.
 import json
 from unittest.mock import MagicMock, patch
 
-import pytest
 
 from app.agent.agent import SupportAgent
 from app.core.config import Settings

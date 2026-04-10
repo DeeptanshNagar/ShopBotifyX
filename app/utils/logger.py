@@ -6,7 +6,6 @@ obtains its own child logger via ``logging.getLogger(__name__)``.
 """
 
 import logging
-from pathlib import Path
 
 from app.core.config import LOG_DIR
 
