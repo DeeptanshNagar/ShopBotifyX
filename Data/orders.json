@@ -4,7 +4,10 @@
     "customer": "Alice Johnson",
     "email": "alice@example.com",
     "status": "shipped",
-    "items": ["Wireless Headphones", "USB-C Cable"],
+    "items": [
+      "Wireless Headphones",
+      "USB-C Cable"
+    ],
     "total": 89.99,
     "placed_on": "2025-04-01",
     "estimated_delivery": "2025-04-09",
@@ -15,7 +18,9 @@
     "customer": "Bob Smith",
     "email": "bob@example.com",
     "status": "processing",
-    "items": ["Mechanical Keyboard"],
+    "items": [
+      "Mechanical Keyboard"
+    ],
     "total": 129.00,
     "placed_on": "2025-04-06",
     "estimated_delivery": "2025-04-12",
@@ -26,7 +31,10 @@
     "customer": "Carol White",
     "email": "carol@example.com",
     "status": "delivered",
-    "items": ["Laptop Stand", "Mouse Pad"],
+    "items": [
+      "Laptop Stand",
+      "Mouse Pad"
+    ],
     "total": 54.50,
     "placed_on": "2025-03-25",
     "estimated_delivery": "2025-03-31",
@@ -37,7 +45,9 @@
     "customer": "Dan Lee",
     "email": "dan@example.com",
     "status": "cancelled",
-    "items": ["Gaming Mouse"],
+    "items": [
+      "Gaming Mouse"
+    ],
     "total": 45.00,
     "placed_on": "2025-04-02",
     "estimated_delivery": null,
