@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  shopbot:
+    build: .
+    container_name: shopbot
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data:ro      # mount data as read-only
+      - ./logs:/app/logs          # persist logs to host
+    stdin_open: true              # keep stdin open for CLI
+    tty: true                     # allocate a pseudo-TTY

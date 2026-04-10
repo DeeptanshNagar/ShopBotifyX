@@ -26,11 +26,20 @@ You are a helpful customer support chatbot for an online electronics store calle
 
 ## Diagnosis — Why V1 Fails
 
-- **No tool priority rules.** The prompt says "you have tools" but gives no guidance on *when* to use which tool. The LLM guesses, and guesses inconsistently.
-- **No decision boundary for escalation.** The agent doesn't know when it's appropriate to give up and escalate vs. keep trying tools — so it sometimes loops or apologizes repeatedly.
-- **Ambiguous intent handling missing.** "I want my money back" could mean a policy question (search_faq) or an active return (request_return). V1 has no rule for resolving this ambiguity.
-- **No output format guidance.** The agent sometimes dumps raw-looking data in its response, which feels robotic, especially after tool results are returned.
-- **No constraint against hallucination.** Without an explicit rule, the LLM occasionally invents policy details (e.g., "refunds take 3 days") instead of using the FAQ tool.
+### 1. No tool priority rules
+The prompt says "you have tools" but gives no guidance on *when* to use which tool. The LLM guesses, and guesses inconsistently.
+
+### 2. No decision boundary for escalation
+The agent doesn't know when it's appropriate to give up and escalate vs. keep trying tools — so it sometimes loops or apologizes repeatedly.
+
+### 3. Ambiguous intent handling missing
+"I want my money back" could mean a policy question (`search_faq`) or an active return (`request_return`). V1 has no rule for resolving this ambiguity.
+
+### 4. No output format guidance
+The agent sometimes dumps raw-looking data in its response, which feels robotic, especially after tool results are returned.
+
+### 5. No constraint against hallucination
+Without an explicit rule, the LLM occasionally invents policy details (e.g., "refunds take 3 days") instead of using the FAQ tool.
 
 ---
 
@@ -63,9 +72,9 @@ You have access to four tools:
 
 ---
 
-## Side-by-Side Diff — Same Input
+## Side-by-Side Comparison — Same Input
 
-**Input:** `"I want my money back for my order"`
+### Input: `"I want my money back for my order"`
 
 | Dimension | V1 Output | V2 Output |
 |---|---|---|
@@ -75,9 +84,7 @@ You have access to four tools:
 | **Consistency** | Varies — sometimes calls wrong tool on follow-up | Consistent across runs |
 | **Hallucination risk** | Medium — may invent policy details | Low — grounded in FAQ tool result |
 
----
-
-**Input:** `"ORD-1003"` (follow-up after the above)
+### Follow-up Input: `"ORD-1003"`
 
 | Dimension | V1 Output | V2 Output |
 |---|---|---|
@@ -93,4 +100,14 @@ The key improvement isn't length — it's **specificity of decision rules**. V1 
 
 The explicit anti-hallucination rule (`Never make up order details... Always use tools`) directly addresses the most common failure mode seen in V1. And the response style section converts a raw data-dumping agent into one that communicates like a real support rep.
 
-V2 is better because every added line **removes a choice the LLM previously had to make on its own** — and was making incorrectly.
+**V2 is better because every added line removes a choice the LLM previously had to make on its own — and was making incorrectly.**
+
+---
+
+## Key Takeaways
+
+1. **Enumerated decision rules** beat vague instructions — they constrain the LLM's action space.
+2. **Anti-hallucination guardrails** must be explicit; the model won't infer them.
+3. **Output formatting directives** (no raw JSON, natural language only) dramatically improve UX.
+4. **Tool ordering hints** (e.g., "use lookup_order *first*") create predictable multi-step workflows.
+5. **Escalation as a defined exit** prevents the agent from looping on unresolvable queries.
